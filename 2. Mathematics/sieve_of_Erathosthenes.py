@@ -23,24 +23,23 @@ def sieve(n):
         i += 1
 
 # Better Approach
-# def sieve2(n):
-#         i = 2
+def sieve2(n):
+        i = 2
 
-#         isPrime2 = [True] * (n+1)
+        isPrime2 = [True] * (n+1)
 
-#         while i*i < n:
-#             if isPrime2[i]:
-#                 for j in range ( 2* i, n+1, i):
-#                     isPrime2 = False
-#             i += 1
-
-#         for i in isPrime2:
-#             if isPrime2[i]:
-#                 print(i)
+        while i*i < n:
+            if isPrime2[i]:
+                for j in range ( 2 * i, n+1, i):
+                    isPrime2[j] = False
+            i += 1
 
         
-
-
+        for i in range (2, n+1):
+            if isPrime2[i]:
+                print(i)
+            i+=1
+        
 sieve(10)
 print('-------')
-# sieve2(10)
+sieve2(10)

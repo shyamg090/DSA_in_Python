@@ -23,3 +23,16 @@ def evenodd(l):
 even, odd = evenodd([10,41,30,15,80])
 print(even)
 print(odd)
+
+print('##############')
+
+# or
+
+def spe(l):
+    odd = [ x for x in l if x & 1 == 1]
+    even = [ x for x in l if x & 1 == 0]
+    return even,odd
+
+even, odd = spe([10,41,30,15,80])
+print(even)
+print(odd)
